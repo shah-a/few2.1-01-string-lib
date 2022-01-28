@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "A library for string manipulation.",
   "main": "src/index.js",
+  "files": ["src/**/*"],
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon src/index.js",
