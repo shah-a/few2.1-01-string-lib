@@ -6,4 +6,6 @@
  * Note: This is the same as str.toUpperCase()
  */
 
-module.exports = (s) => (s);
+const allCaps = (s) => s.toUpperCase();
+
+module.exports = allCaps;

@@ -27,3 +27,11 @@ const s = require('@shah-a/string-lib');
 ```
 
 That's it! 😃
+
+## API
+
+Here's a list of all available methods:
+
+```
+...
+```

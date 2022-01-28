@@ -4,4 +4,6 @@
  * E.g: 'salaam' => 'Salaam'
  */
 
-module.exports = (s) => (s);
+const capFirst = (s) => s[0].toUpperCase() + s.slice(1);
+
+module.exports = capFirst;
