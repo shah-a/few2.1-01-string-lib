@@ -10,4 +10,6 @@
  * E.g: '   Salaam   world!   ' -> 'Salaam world!'
  */
 
-module.exports = (s) => (s);
+const removeExtraSpaces = (s) => s.replace(/\s+/g, ' ').trim();
+
+module.exports = removeExtraSpaces;
