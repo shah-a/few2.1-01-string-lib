@@ -23,7 +23,15 @@ Require the package in your script and call any of the available methods.
 
 ```javascript
 const s = require('@shah-a/string-lib');
-...
+
+console.log(s.makeHashtag('Amazing bongo drums for sale'))
+// Output: ['#Amazing', '#Bongo', '#Drums']
+
+console.log(s.shift('Shift me right by 3', 3))
+// Output: y 3Shift me right b
+
+console.log(s.shift('Shift me left by 3', -3))
+// Output: 'ft me left by 3Shi'
 ```
 
 That's it! 😃
