@@ -29,19 +29,15 @@ const funcs = [
   s.isEmpty,
 ];
 
-// funcs.forEach((func, i) => {
-//   if (i === 10 || i === 11) {
-//     console.log(`${i + 1}: ${func(str1, '🤔')}, ${func(str2, '🤔')} (${func.name})`);
-//     return;
-//   }
-//   console.log(`${i + 1}: ${func(str1)}, ${func(str2)} (${func.name})`);
-// });
+funcs.forEach((func, i) => {
+  if (i === 10 || i === 11) {
+    console.log(`${i + 1}: ${func(str1, '🤔')}, ${func(str2, '🤔')} (${func.name})`);
+    return;
+  }
+  console.log(`${i + 1}: ${func(str1)}, ${func(str2)} (${func.name})`);
+});
 
 console.log(s.makeHashtag('Amazing bongo drums for sale'));
-// Output: ['#Amazing', '#Bongo', '#Drums']
-
 console.log(s.shift('Shift me right by 3', 3))
-// Output: y 3Shift me right b
-
 console.log(s.shift('Shift me left by 3', -3))
-// Output: 'ft me left by 3Shi'
+console.log(s.isEmpty(str3));
