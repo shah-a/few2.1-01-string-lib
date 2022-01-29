@@ -1,22 +1,3 @@
-/*
- * makeHashtag:
- * Converts a string to a list of hashtags. A
- * hashtag begins with '#' and has no spaces.
- * Also uppercases the hashtagged words.
- *
- * If the string has more than three words, picks
- * the three longest and returns hashtags from
- * those.
- *
- * E.g. 1:
- * Input: 'Salaam world'
- * Output: ['#Salaam', '#World']
- *
- * E.g. 2:
- * Input: 'Amazing bongo drums for sale'
- * Output: ['#Amazing', '#Bongo', '#Drums']
- */
-
 const { capWords } = require('./challenge-02');
 const removeExtraSpaces = require('./challenge-04');
 
