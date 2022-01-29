@@ -126,7 +126,7 @@ s.kebobCase(' Kebob Case! ');
 Removes extra spaces and replaces spaces with a hyphen "-". Also makes all characters lowercase and removes special characters.
 
 ```javascript
-s.kebobCase(' Kebob Case! ');
+s.kebobCaseNoSpecial(' Kebob Case! ');
 // returns 'kebob-case'
 ```
 
@@ -146,7 +146,7 @@ s.snakeCase(' Snake Case! ');
 Removes extra spaces and replaces spaces with an underscore "_". Also makes all characters lowercase and removes special characters.
 
 ```javascript
-s.snakeCase(' Snake Case! ');
+s.snakeCaseNoSpecial(' Snake Case! ');
 // returns 'snake_case'
 ```
 
