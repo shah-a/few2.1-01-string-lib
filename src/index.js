@@ -30,37 +30,3 @@ module.exports = {
   makeHashtag,
   isEmpty,
 };
-
-// const str1 = 'the quick brown fox jumped over the lazy dog';
-// const str2 = '   Salaam   world!   ';
-// const str3 = `
-
-// 			`;
-
-// const funcs = [
-//   capFirst,
-//   lowerFirst,
-//   capWords,
-//   capTitle,
-//   allCaps,
-//   removeExtraSpaces,
-//   kebobCase,
-//   kebobCaseNoSpecial,
-//   snakeCase,
-//   snakeCaseNoSpecial,
-//   customSeparator,
-//   customSeparatorNoSpecial,
-//   camelCase,
-//   camelCaseNoSpecial,
-//   shift,
-//   makeHashtag,
-//   isEmpty,
-// ];
-
-// funcs.forEach((func, i) => {
-//   if (i === 10 || i === 11) {
-//     console.log(`${i + 1}: ${func(str1, '🤔')}, ${func(str2, '🤔')} (${func.name})`);
-//     return;
-//   }
-//   console.log(`${i + 1}: ${func(str1)}, ${func(str2)} (${func.name})`);
-// });
