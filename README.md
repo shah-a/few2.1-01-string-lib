@@ -38,11 +38,60 @@ That's it! 😃
 
 ## API
 
-Reference list of available functions (sorted by the challenge of the assignment they appeared):
+Reference list of available functions (sorted by the assignment's corresponding challenge number):
 
-### Challenge 1
+### Functions
 
-#### `capFirst`
+#### Challenge 1
+
+- [`capFirst(s: string)`](#capfirsts-string)
+- [`lowerFirst(s: string)`](#lowerfirsts-string)
+
+#### Challenge 2
+
+- [`capWords(s: string)`](#capwordss-string)
+- [`capTitle(s: string)`](#captitles-string)
+
+#### Challenge 3
+
+- [`allCaps(s: string)`](#allcapss-string)
+
+#### Challenge 4
+
+- [`removeExtraSpaces(s: string)`](#removeextraspacess-string)
+
+#### Challenge 5
+
+- [`kebobCase(s: string)`](#kebobcases-string)
+- [`kebobCaseNoSpecial(s: string)`](#kebobcasenospecials-string)
+
+#### Challenge 6
+
+- [`snakeCase(s: string)`](#snakecases-string)
+- [`snakeCaseNoSpecial(s: string)`](#snakecasenospecials-string)
+- [`customSeparator(s: string, separator?: string)`](#customseparators-string-separator-string)
+- [`customSeparatorNoSpecial(s: string, separator?: string)`](#customseparatornospecials-string-separator-string)
+
+#### Challenge 7
+
+- [`camelCase(s: string)`](#camelcases-string)
+- [`camelCaseNoSpecial(s: string)`](#camelcasenospecials-string)
+
+#### Challenge 8
+
+- [`shift(s: string, step?: number)`](#shifts-string-step-number)
+
+#### Challenge 9
+
+- [`makeHashtag(s: string)`](#makehashtags-string)
+
+#### Challenge 10
+
+- [`isEmpty(s: string)`](#isemptys-string)
+
+### Reference
+
+#### `capFirst(s: string)`
 
 Uppercases the first character in a string.
 
@@ -51,7 +100,7 @@ s.capFirst('salaam');
 // returns 'Salaam'
 ```
 
-#### `lowerFirst`
+#### `lowerFirst(s: string)`
 
 Lowercases the first character in a string.
 
@@ -60,9 +109,7 @@ s.lowerFirst('Salaam');
 // returns 'salaam'
 ```
 
-### Challenge 2
-
-#### `capWords`
+#### `capWords(s: string)`
 
 Uppercases the first letter of each word in a string.
 
@@ -71,7 +118,7 @@ s.capWords('salaam world');
 // returns 'Salaam World'
 ```
 
-#### `capTitle`
+#### `capTitle(s: string)`
 
 Uppercases the first letter of each word in a string except for the following words:
 
@@ -84,9 +131,7 @@ s.capTitle('the most foo in bar');
 // returns 'The Most foo in Bar'
 ```
 
-### Challenge 3
-
-#### `allCaps`
+#### `allCaps(s: string)`
 
 Uppercases all characters in a string.
 
@@ -97,9 +142,7 @@ s.allCaps('salaam world');
 // returns 'SALAAM WORLD'
 ```
 
-### Challenge 4
-
-#### `removeExtraSpaces`
+#### `removeExtraSpaces(s: string)`
 
 Removes all spaces from the beginning and end of a string along with any extra spaces in the middle.
 
@@ -110,9 +153,7 @@ s.removeExtraSpaces('   Salaam   world!   ');
 // returns 'Salaam world!'
 ```
 
-### Challenge 5
-
-#### `kebobCase`
+#### `kebobCase(s: string)`
 
 Removes extra spaces and replaces spaces with a hyphen "-". Also makes all characters lowercase.
 
@@ -121,7 +162,7 @@ s.kebobCase(' Kebob Case! ');
 // returns 'kebob-case!'
 ```
 
-#### `kebobCaseNoSpecial`
+#### `kebobCaseNoSpecial(s: string)`
 
 Removes extra spaces and replaces spaces with a hyphen "-". Also makes all characters lowercase and removes special characters.
 
@@ -130,9 +171,7 @@ s.kebobCaseNoSpecial(' Kebob Case! ');
 // returns 'kebob-case'
 ```
 
-### Challenge 6
-
-#### `snakeCase`
+#### `snakeCase(s: string)`
 
 Removes extra spaces and replaces spaces with an underscore "_". Also makes all characters lowercase.
 
@@ -141,7 +180,7 @@ s.snakeCase(' Snake Case! ');
 // returns 'snake_case!'
 ```
 
-#### `snakeCaseNoSpecial`
+#### `snakeCaseNoSpecial(s: string)`
 
 Removes extra spaces and replaces spaces with an underscore "_". Also makes all characters lowercase and removes special characters.
 
@@ -150,7 +189,7 @@ s.snakeCaseNoSpecial(' Snake Case! ');
 // returns 'snake_case'
 ```
 
-#### `customSeparator`
+#### `customSeparator(s: string, separator?: string)`
 
 Removes extra spaces and replaces spaces with a custom separator. Also makes all characters lowercase.
 
@@ -159,7 +198,14 @@ s.customSeparator(' Custom Case! ', '🐒');
 // returns 'custom🐒case!'
 ```
 
-#### `customSeparatorNoSpecial`
+If no separator is provided, the default separator is `' '` (one space).
+
+```javascript
+s.customSeparator(' Custom Case! ');
+// returns 'custom case!'
+```
+
+#### `customSeparatorNoSpecial(s: string, separator?: string)`
 
 Removes extra spaces and replaces spaces with a custom separator. Also makes all characters lowercase and removes special characters.
 
@@ -168,9 +214,14 @@ s.customSeparatorNoSpecial(' Custom Case! ', '🐒')
 // returns 'custom🐒case'
 ```
 
-### Challenge 7
+If no separator is provided, the default separator is `' '` (one space).
 
-#### `camelCase`
+```javascript
+s.customSeparator(' Custom Case! ');
+// returns 'custom case'
+```
+
+#### `camelCase(s: string)`
 
 Lowercases the first character of the first word. Then uppercases the first character of all other words. Also removes all spaces.
 
@@ -179,7 +230,7 @@ s.camelCase('Camel Case!')
 // returns 'camelCase!'
 ```
 
-#### `camelCaseNoSpecial`
+#### `camelCaseNoSpecial(s: string)`
 
 Lowercases the first character of the first word. Then uppercases the first character of all other words. Also removes all spaces and removes special characters.
 
@@ -188,9 +239,7 @@ s.camelCaseNoSpecial('Camel Case!')
 // returns 'camelCase'
 ```
 
-### Challenge 8
-
-#### `shift`
+#### `shift(s: string, step?: number)`
 
 Shifts the characters of a string to the right or left. If the `step` parameter is positive, characters will be shifted to the right. If the `step` parameter is negative, the characters will be shifted to the left.
 
@@ -204,9 +253,14 @@ s.shift('Shift me left by 3', -3)
 // returns 'ft me left by 3Shi'
 ```
 
-### Challenge 9
+If no `step` is provided, the default `step` is `1`.
 
-#### `makeHashtag`
+```javascript
+s.shift('Shift me right by 1')
+// returns '1Shift me right by '
+```
+
+#### `makeHashtag(s: string)`
 
 Converts a string to a list of hashtags. A hashtag begins with '#' and has no spaces. Also uppercases the hashtagged words.
 
@@ -222,9 +276,7 @@ s.makeHashtag('Amazing bongo drums for sale')
 // returns ['#Amazing', '#Bongo', '#Drums']
 ```
 
-### Challenge 10
-
-#### `isEmpty`
+#### `isEmpty(s: string)`
 
 Returns true if a string is empty or contains only whitespace. Whitespace includes: spaces, line returns, and tabs. These characters can be represented with: '\n' (new line), '\r' (carriage return), and '\t' (tab).
 
