@@ -1,8 +1,21 @@
 /*
+ * capWords:
  * Uppercases the first letter of each word in a
  * string.
  *
  * E.g: 'salaam world' => 'Salaam World'
+ *
+ * capTitle:
+ * Uppercases the first letter of each word in a
+ * string except for the following words:
+ *
+ * - 'the', 'in', 'a', 'an', 'and', 'but', 'for',
+ *   'at', 'by', and 'from'.
+ *
+ * The first word is always uppercased, even if
+ * it's on the exception list.
+ *
+ * E.g: 'the most foo in bar' => 'The Most foo in Bar'
  */
 
 const { capFirst } = require('./challenge-01');

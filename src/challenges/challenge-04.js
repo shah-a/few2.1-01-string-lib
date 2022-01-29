@@ -1,4 +1,5 @@
 /*
+ * removeExtraSpaces:
  * Removes all spaces from the beginning and end
  * of a string along with any extra spaces in the
  * middle.

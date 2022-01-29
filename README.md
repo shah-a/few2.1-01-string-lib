@@ -28,7 +28,7 @@ console.log(s.makeHashtag('Amazing bongo drums for sale'))
 // Output: ['#Amazing', '#Bongo', '#Drums']
 
 console.log(s.shift('Shift me right by 3', 3))
-// Output: y 3Shift me right b
+// Output: 'y 3Shift me right b'
 
 console.log(s.shift('Shift me left by 3', -3))
 // Output: 'ft me left by 3Shi'

@@ -1,4 +1,5 @@
 /*
+ * allCaps:
  * Uppercases all characters in a string.
  *
  * E.g: 'salaam world' => 'SALAAM WORLD'

@@ -1,9 +1,17 @@
 /*
+ * kebobCase:
  * Removes extra spaces and replaces spaces with
- * the hyphen "-". Also makes all characters
+ * a hyphen "-". Also makes all characters
  * lowercase.
  *
- * E.g: ' Kebob Case ' -> 'kebob-case'
+ * E.g: ' Kebob Case! ' -> 'kebob-case!'
+ *
+ * kebobCaseNoSpecial:
+ * Removes extra spaces and replaces spaces with
+ * a hyphen "-". Also makes all characters
+ * lowercase and removes special characters.
+ *
+ * E.g: ' Kebob Case! ' -> 'kebob-case'
  */
 
 const kebobCase = (s) => s.trim().toLowerCase().replace(/\s+/g, '-');
