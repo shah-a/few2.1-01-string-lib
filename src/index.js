@@ -7,6 +7,9 @@ const {
   snakeCase, snakeCaseNoSpecial, customSeparator, customSeparatorNoSpecial,
 } = require('./challenges/challenge-06');
 const { camelCase, camelCaseNoSpecial } = require('./challenges/challenge-07');
+const shift = require('./challenges/challenge-08');
+const makeHashtag = require('./challenges/challenge-09');
+const isEmpty = require('./challenges/challenge-10');
 
 module.exports = {
   capFirst,
@@ -23,10 +26,16 @@ module.exports = {
   customSeparatorNoSpecial,
   camelCase,
   camelCaseNoSpecial,
+  shift,
+  makeHashtag,
+  isEmpty,
 };
 
 // const str1 = 'the quick brown fox jumped over the lazy dog';
 // const str2 = '   Salaam   world!   ';
+// const str3 = `
+
+// 			`;
 
 // const funcs = [
 //   capFirst,
@@ -43,6 +52,9 @@ module.exports = {
 //   customSeparatorNoSpecial,
 //   camelCase,
 //   camelCaseNoSpecial,
+//   shift,
+//   makeHashtag,
+//   isEmpty,
 // ];
 
 // funcs.forEach((func, i) => {
