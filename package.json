@@ -7,9 +7,8 @@
     "src/**/*"
   ],
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon src/index.js",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "devDependencies": {
     "eslint": "^8.7.0",
