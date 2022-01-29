@@ -5,7 +5,7 @@
  * E.g: 'salaam world' => 'Salaam World'
  */
 
-const capFirst = require('./challenge-01');
+const { capFirst } = require('./challenge-01');
 
 const keepLower = ['the', 'in', 'a', 'an', 'and', 'but', 'for', 'at', 'by', 'from'];
 
