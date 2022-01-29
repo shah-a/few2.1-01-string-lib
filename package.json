@@ -3,17 +3,19 @@
   "version": "1.0.1",
   "description": "A library for string manipulation.",
   "main": "src/index.js",
-  "files": ["src/**/*"],
+  "files": [
+    "src/**/*"
+  ],
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
-  "dependencies": {},
   "devDependencies": {
     "eslint": "^8.7.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4",
+    "jest": "^27.4.7",
     "nodemon": "^2.0.15"
   },
   "repository": {
