@@ -1,5 +1,5 @@
 /* eslint-disable */
-// Script for testing initial functionality
+// Sandbox for checking functions
 
 const s = require('../src');
 
