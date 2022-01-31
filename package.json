@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage"
   },
   "devDependencies": {
     "eslint": "^8.7.0",
