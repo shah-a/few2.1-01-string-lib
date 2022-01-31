@@ -84,6 +84,9 @@ describe('CHALLENGE 9 TESTS', () => {
   test('makeHashtag', () => {
     expect(s.makeHashtag('Salaam world')).toEqual(['#Salaam', '#World']);
     expect(s.makeHashtag('Amazing bongo drums for sale')).toEqual(['#Amazing', '#Bongo', '#Drums']);
+    expect(s.makeHashtag(`
+        
+			  `)).toEqual([]); // eslint-disable-line no-tabs
   });
 });
 
@@ -92,7 +95,7 @@ describe('CHALLENGE 10 TESTS', () => {
     expect(s.isEmpty('Abc def')).toBe(false);
     expect(s.isEmpty('  \n  \n\r\t')).toBe(true);
     expect(s.isEmpty(`
-
-			`)).toBe(true); // eslint-disable-line no-tabs
+        
+			  `)).toBe(true); // eslint-disable-line no-tabs
   });
 });

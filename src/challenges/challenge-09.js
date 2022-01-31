@@ -3,6 +3,7 @@ const removeExtraSpaces = require('./challenge-04');
 
 const makeHashtag = (s) => {
   const trimmedString = removeExtraSpaces(s);
+  if (trimmedString.length === 0) return [];
   const cappedWords = capWords(trimmedString);
   const hashtaggedWords = cappedWords.split(' ').map((word) => `#${word}`);
   hashtaggedWords.sort((a, b) => b.length - a.length);
