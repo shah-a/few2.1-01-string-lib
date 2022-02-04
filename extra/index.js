@@ -1,13 +1,16 @@
-/* eslint-disable */
-// Sandbox for checking functions
+/* SANDBOX FOR CHECKING FUNCTIONS */
+/* eslint-disable no-tabs, no-console */
 
 const s = require('../src');
 
-const str1 = 'the quick brown fox jumps over the lazy dog';
-const str2 = '   Salaam   world!   ';
-const str3 = `
+const testInputs = [
+  'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!',
+  'the quick brown fox jumps over the lazy dog!',
+  '   padded   with   spaces!   ',
+  `
 
-			`;
+			`,
+];
 
 const funcs = [
   s.capFirst,
@@ -30,14 +33,18 @@ const funcs = [
 ];
 
 funcs.forEach((func, i) => {
-  if (i === 10 || i === 11) {
-    console.log(`${i + 1}: ${func(str1, '🤔')}, ${func(str2, '🤔')} (${func.name})`);
-    return;
-  }
-  console.log(`${i + 1}: ${func(str1)}, ${func(str2)} (${func.name})`);
+  console.log(`${i + 1}: ${func.name}`);
+  testInputs.forEach((testInput) => {
+    if (i === 10 || i === 11) {
+      console.log(func(testInput, '🤔'));
+      return;
+    }
+    console.log(func(testInput));
+  });
 });
 
+console.log('\n-------------------------------------\n');
+
 console.log(s.makeHashtag('Amazing bongo drums for sale'));
-console.log(s.shift('Shift me right by 3', 3))
-console.log(s.shift('Shift me left by 3', -3))
-console.log(s.isEmpty(str3));
+console.log(s.shift('Shift me right by 3', 3));
+console.log(s.shift('Shift me left by 3', -3));
