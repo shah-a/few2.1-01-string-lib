@@ -1,4 +1,4 @@
-const { capFirst } = require('./challenge-01');
+const { capFirst, lowerFirst } = require('./challenge-01');
 
 const keepLower = ['the', 'in', 'a', 'an', 'and', 'but', 'for', 'at', 'by', 'from'];
 
@@ -9,7 +9,7 @@ const capTitle = (s) => s.split(' ').map((word, index) => {
     return capFirst(word);
   }
   if (keepLower.includes(word.toLowerCase())) {
-    return word;
+    return lowerFirst(word);
   }
   return capFirst(word);
 }).join(' ');
