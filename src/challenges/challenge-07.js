@@ -3,7 +3,7 @@ const { capWords } = require('./challenge-02');
 const removeExtraSpaces = require('./challenge-04');
 
 const camelCase = (s) => {
-  const trimmedString = removeExtraSpaces(s);
+  const trimmedString = removeExtraSpaces(s).toLowerCase();
   const words = trimmedString.split(' ');
   const firstWord = lowerFirst(words[0]);
   const restOfWords = words.slice(1).map(capWords);
