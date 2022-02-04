@@ -1,18 +1,61 @@
 const s = require('../src/index');
+const testCases = require('./testCases.json');
+
+describe('Temp', () => {
+  test('temp test', () => {
+    testCases.forEach((testCase) => {
+      expect(s.camelCase(testCase.input)).toBe(testCase.expected.camelCase);
+    });
+  });
+});
 
 describe('CHALLENGE 1 TESTS', () => {
   test('capFirst', () => {
     expect(s.capFirst('salaam')).toBe('Salaam');
+    expect(s.capFirst('string-with-no-spaces')).toBe('String-with-no-spaces');
+    expect(s.capFirst('Starts with uppercase')).toBe('Starts with uppercase');
+    expect(s.capFirst('the quick brown fox jumps over the lazy dog')).toBe('The quick brown fox jumps over the lazy dog');
+    expect(s.capFirst('   padded   with   spaces   ')).toBe('   padded   with   spaces   ');
+    expect(s.capFirst('')).toBe('');
+    /* eslint-disable no-tabs */
+    expect(s.capFirst(`
+        
+			  `)).toBe(`
+        
+			  `);
+    /* eslint-enable no-tabs */
   });
 
   test('lowerFirst', () => {
     expect(s.lowerFirst('Salaam')).toBe('salaam');
+    expect(s.lowerFirst('String-with-no-spaces')).toBe('string-with-no-spaces');
+    expect(s.lowerFirst('starts with lowercase')).toBe('starts with lowercase');
+    expect(s.lowerFirst('the quick brown fox jumps over the lazy dog')).toBe('the quick brown fox jumps over the lazy dog');
+    expect(s.lowerFirst('   padded   with   spaces   ')).toBe('   padded   with   spaces   ');
+    expect(s.lowerFirst('')).toBe('');
+    /* eslint-disable no-tabs */
+    expect(s.lowerFirst(`
+        
+			  `)).toBe(`
+        
+			  `);
+    /* eslint-enable no-tabs */
   });
 });
 
 describe('CHALLENGE 2 TESTS', () => {
   test('capWords', () => {
     expect(s.capWords('salaam world')).toBe('Salaam World');
+    expect(s.capWords('one-word')).toBe('One-word');
+    expect(s.capWords('One-word')).toBe('One-word');
+    expect(s.capWords('')).toBe('');
+    /* eslint-disable no-tabs */
+    expect(s.capWords(`
+        
+			  `)).toBe(`
+        
+			  `);
+    /* eslint-enable no-tabs */
   });
 
   test('capTitle', () => {
@@ -84,18 +127,22 @@ describe('CHALLENGE 9 TESTS', () => {
   test('makeHashtag', () => {
     expect(s.makeHashtag('Salaam world')).toEqual(['#Salaam', '#World']);
     expect(s.makeHashtag('Amazing bongo drums for sale')).toEqual(['#Amazing', '#Bongo', '#Drums']);
+    /* eslint-disable no-tabs */
     expect(s.makeHashtag(`
         
-			  `)).toEqual([]); // eslint-disable-line no-tabs
+			  `)).toEqual([]);
   });
+  /* eslint-enable no-tabs */
 });
 
 describe('CHALLENGE 10 TESTS', () => {
   test('isEmpty', () => {
     expect(s.isEmpty('Abc def')).toBe(false);
     expect(s.isEmpty('  \n  \n\r\t')).toBe(true);
+    /* eslint-disable no-tabs */
     expect(s.isEmpty(`
         
-			  `)).toBe(true); // eslint-disable-line no-tabs
+			  `)).toBe(true);
+    /* eslint-enable no-tabs */
   });
 });

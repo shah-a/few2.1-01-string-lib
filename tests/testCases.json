@@ -1,0 +1,24 @@
+[
+  {
+    "input": "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!",
+    "expected": {
+      "capFirst": "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!",
+      "lowerFirst": "tHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!",
+      "capWords": "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!",
+      "capTitle": "THE QUICK BROWN FOX JUMPS OVER tHE LAZY DOG!",
+      "allCaps": "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!",
+      "removeExtraSpaces": "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!",
+      "kebobCase": "the-quick-brown-fox-jumps-over-the-lazy-dog!",
+      "kebobCaseNoSpecial": "the-quick-brown-fox-jumps-over-the-lazy-dog",
+      "snakeCase": "the_quick_brown_fox_jumps_over_the_lazy_dog!",
+      "snakeCaseNoSpecial": "the_quick_brown_fox_jumps_over_the_lazy_dog",
+      "customSeparator": "the🤔quick🤔brown🤔fox🤔jumps🤔over🤔the🤔lazy🤔dog!",
+      "customSeparatorNoSpecial": "the🤔quick🤔brown🤔fox🤔jumps🤔over🤔the🤔lazy🤔dog",
+      "camelCase": "theQuickBrownFoxJumpsOverTheLazyDog!",
+      "camelCaseNoSpecial": "theQuickBrownFoxJumpsOverTheLazyDog!",
+      "shift": "!THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG",
+      "makeHashtag": [ "#QUICK", "#BROWN", "#JUMPS" ],
+      "isEmpty": false
+    }
+  }
+]

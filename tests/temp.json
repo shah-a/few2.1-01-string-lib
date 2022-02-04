@@ -1,0 +1,90 @@
+[
+  {
+    "input": "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!",
+    "expected": {
+      "capFirst": "",
+      "lowerFirst": "",
+      "capWords": "",
+      "capTitle": "",
+      "allCaps": "",
+      "removeExtraSpaces": "",
+      "kebobCase": "",
+      "kebobCaseNoSpecial": "",
+      "snakeCase": "",
+      "snakeCaseNoSpecial": "",
+      "customSeparator": "",
+      "customSeparatorNoSpecial": "",
+      "camelCase": "",
+      "camelCaseNoSpecial": "",
+      "shift": "",
+      "makeHashtag": "",
+      "isEmpty": ""
+    }
+  },
+  {
+    "input": "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!",
+    "expected": {
+      "capFirst": "",
+      "lowerFirst": "",
+      "capWords": "",
+      "capTitle": "",
+      "allCaps": "",
+      "removeExtraSpaces": "",
+      "kebobCase": "",
+      "kebobCaseNoSpecial": "",
+      "snakeCase": "",
+      "snakeCaseNoSpecial": "",
+      "customSeparator": "",
+      "customSeparatorNoSpecial": "",
+      "camelCase": "",
+      "camelCaseNoSpecial": "",
+      "shift": "",
+      "makeHashtag": "",
+      "isEmpty": ""
+    }
+  },
+  {
+    "input": "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!",
+    "expected": {
+      "capFirst": "",
+      "lowerFirst": "",
+      "capWords": "",
+      "capTitle": "",
+      "allCaps": "",
+      "removeExtraSpaces": "",
+      "kebobCase": "",
+      "kebobCaseNoSpecial": "",
+      "snakeCase": "",
+      "snakeCaseNoSpecial": "",
+      "customSeparator": "",
+      "customSeparatorNoSpecial": "",
+      "camelCase": "",
+      "camelCaseNoSpecial": "",
+      "shift": "",
+      "makeHashtag": "",
+      "isEmpty": ""
+    }
+  },
+  {
+    "input": "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!",
+    "expected": {
+      "capFirst": "",
+      "lowerFirst": "",
+      "capWords": "",
+      "capTitle": "",
+      "allCaps": "",
+      "removeExtraSpaces": "",
+      "kebobCase": "",
+      "kebobCaseNoSpecial": "",
+      "snakeCase": "",
+      "snakeCaseNoSpecial": "",
+      "customSeparator": "",
+      "customSeparatorNoSpecial": "",
+      "camelCase": "",
+      "camelCaseNoSpecial": "",
+      "shift": "",
+      "makeHashtag": "",
+      "isEmpty": ""
+    }
+  }
+]
