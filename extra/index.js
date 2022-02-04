@@ -7,6 +7,10 @@ const testInputs = [
   'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!',
   'the quick brown fox jumps over the lazy dog!',
   '   padded   with   spaces!   ',
+  // '',
+  // 'string, with. a: bunch; "of" punctuation!',
+  // ', . ! @ # $ % ^ & * ( ) _ + - = { } [ ] | : " < > ? / \\',
+  // '!,@,#,$,%,^,&,*,(,),_,+,-,=,{,},[,],|,:,",<,>,?,/,\\',
   `
 
 			`,
