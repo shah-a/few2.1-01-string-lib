@@ -5,7 +5,7 @@
       "capFirst": "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!",
       "lowerFirst": "tHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!",
       "capWords": "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!",
-      "capTitle": "THE QUICK BROWN FOX JUMPS OVER tHE LAZY DOG!",
+      "capTitle": "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!",
       "allCaps": "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!",
       "removeExtraSpaces": "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!",
       "kebobCase": "the-quick-brown-fox-jumps-over-the-lazy-dog!",
@@ -15,10 +15,210 @@
       "customSeparator": "the🤔quick🤔brown🤔fox🤔jumps🤔over🤔the🤔lazy🤔dog!",
       "customSeparatorNoSpecial": "the🤔quick🤔brown🤔fox🤔jumps🤔over🤔the🤔lazy🤔dog",
       "camelCase": "theQuickBrownFoxJumpsOverTheLazyDog!",
-      "camelCaseNoSpecial": "theQuickBrownFoxJumpsOverTheLazyDog!",
+      "camelCaseNoSpecial": "theQuickBrownFoxJumpsOverTheLazyDog",
       "shift": "!THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG",
-      "makeHashtag": [ "#QUICK", "#BROWN", "#JUMPS" ],
+      "makeHashtag": [
+        "#QUICK",
+        "#BROWN",
+        "#JUMPS"
+      ],
       "isEmpty": false
+    }
+  },
+  {
+    "input": "the quick brown fox jumps over the lazy dog!",
+    "expected": {
+      "capFirst": "The quick brown fox jumps over the lazy dog!",
+      "lowerFirst": "the quick brown fox jumps over the lazy dog!",
+      "capWords": "The Quick Brown Fox Jumps Over The Lazy Dog!",
+      "capTitle": "The Quick Brown Fox Jumps Over the Lazy Dog!",
+      "allCaps": "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!",
+      "removeExtraSpaces": "the quick brown fox jumps over the lazy dog!",
+      "kebobCase": "the-quick-brown-fox-jumps-over-the-lazy-dog!",
+      "kebobCaseNoSpecial": "the-quick-brown-fox-jumps-over-the-lazy-dog",
+      "snakeCase": "the_quick_brown_fox_jumps_over_the_lazy_dog!",
+      "snakeCaseNoSpecial": "the_quick_brown_fox_jumps_over_the_lazy_dog",
+      "customSeparator": "the🤔quick🤔brown🤔fox🤔jumps🤔over🤔the🤔lazy🤔dog!",
+      "customSeparatorNoSpecial": "the🤔quick🤔brown🤔fox🤔jumps🤔over🤔the🤔lazy🤔dog",
+      "camelCase": "theQuickBrownFoxJumpsOverTheLazyDog!",
+      "camelCaseNoSpecial": "theQuickBrownFoxJumpsOverTheLazyDog",
+      "shift": "!the quick brown fox jumps over the lazy dog",
+      "makeHashtag": [
+        "#Quick",
+        "#Brown",
+        "#Jumps"
+      ],
+      "isEmpty": false
+    }
+  },
+  {
+    "input": "   padded   with   spaces!   ",
+    "expected": {
+      "capFirst": "   padded   with   spaces!   ",
+      "lowerFirst": "   padded   with   spaces!   ",
+      "capWords": "   Padded   With   Spaces!   ",
+      "capTitle": "   Padded   With   Spaces!   ",
+      "allCaps": "   PADDED   WITH   SPACES!   ",
+      "removeExtraSpaces": "padded with spaces!",
+      "kebobCase": "padded-with-spaces!",
+      "kebobCaseNoSpecial": "padded-with-spaces",
+      "snakeCase": "padded_with_spaces!",
+      "snakeCaseNoSpecial": "padded_with_spaces",
+      "customSeparator": "padded🤔with🤔spaces!",
+      "customSeparatorNoSpecial": "padded🤔with🤔spaces",
+      "camelCase": "paddedWithSpaces!",
+      "camelCaseNoSpecial": "paddedWithSpaces",
+      "shift": "    padded   with   spaces!  ",
+      "makeHashtag": [
+        "#Spaces!",
+        "#Padded",
+        "#With"
+      ],
+      "isEmpty": false
+    }
+  },
+  {
+    "input": "nospaces",
+    "expected": {
+      "capFirst": "Nospaces",
+      "lowerFirst": "nospaces",
+      "capWords": "Nospaces",
+      "capTitle": "Nospaces",
+      "allCaps": "NOSPACES",
+      "removeExtraSpaces": "nospaces",
+      "kebobCase": "nospaces",
+      "kebobCaseNoSpecial": "nospaces",
+      "snakeCase": "nospaces",
+      "snakeCaseNoSpecial": "nospaces",
+      "customSeparator": "nospaces",
+      "customSeparatorNoSpecial": "nospaces",
+      "camelCase": "nospaces",
+      "camelCaseNoSpecial": "nospaces",
+      "shift": "snospace",
+      "makeHashtag": [
+        "#Nospaces"
+      ],
+      "isEmpty": false
+    }
+  },
+  {
+    "input": "",
+    "expected": {
+      "capFirst": "",
+      "lowerFirst": "",
+      "capWords": "",
+      "capTitle": "",
+      "allCaps": "",
+      "removeExtraSpaces": "",
+      "kebobCase": "",
+      "kebobCaseNoSpecial": "",
+      "snakeCase": "",
+      "snakeCaseNoSpecial": "",
+      "customSeparator": "",
+      "customSeparatorNoSpecial": "",
+      "camelCase": "",
+      "camelCaseNoSpecial": "",
+      "shift": "",
+      "makeHashtag": [],
+      "isEmpty": true
+    }
+  },
+  {
+    "input": "string, with. a: bunc'h; \"of\" punctuation!",
+    "expected": {
+      "capFirst": "String, with. a: bunc'h; \"of\" punctuation!",
+      "lowerFirst": "string, with. a: bunc'h; \"of\" punctuation!",
+      "capWords": "String, With. A: Bunc'h; \"of\" Punctuation!",
+      "capTitle": "String, With. A: Bunc'h; \"of\" Punctuation!",
+      "allCaps": "STRING, WITH. A: BUNC'H; \"OF\" PUNCTUATION!",
+      "removeExtraSpaces": "string, with. a: bunc'h; \"of\" punctuation!",
+      "kebobCase": "string,-with.-a:-bunc'h;-\"of\"-punctuation!",
+      "kebobCaseNoSpecial": "string-with-a-bunch-of-punctuation",
+      "snakeCase": "string,_with._a:_bunc'h;_\"of\"_punctuation!",
+      "snakeCaseNoSpecial": "string_with_a_bunch_of_punctuation",
+      "customSeparator": "string,🤔with.🤔a:🤔bunc'h;🤔\"of\"🤔punctuation!",
+      "customSeparatorNoSpecial": "string🤔with🤔a🤔bunch🤔of🤔punctuation",
+      "camelCase": "string,With.A:Bunc'h;\"of\"Punctuation!",
+      "camelCaseNoSpecial": "stringWithABunchofPunctuation",
+      "shift": "!string, with. a: bunc'h; \"of\" punctuation",
+      "makeHashtag": [
+        "#Punctuation!",
+        "#String,",
+        "#Bunc'h;"
+      ],
+      "isEmpty": false
+    }
+  },
+  {
+    "input": ", . ! @ # $ % ^ & * ( ) _ + - = { } [ ] | : ' \" < > ? / \\",
+    "expected": {
+      "capFirst": ", . ! @ # $ % ^ & * ( ) _ + - = { } [ ] | : ' \" < > ? / \\",
+      "lowerFirst": ", . ! @ # $ % ^ & * ( ) _ + - = { } [ ] | : ' \" < > ? / \\",
+      "capWords": ", . ! @ # $ % ^ & * ( ) _ + - = { } [ ] | : ' \" < > ? / \\",
+      "capTitle": ", . ! @ # $ % ^ & * ( ) _ + - = { } [ ] | : ' \" < > ? / \\",
+      "allCaps": ", . ! @ # $ % ^ & * ( ) _ + - = { } [ ] | : ' \" < > ? / \\",
+      "removeExtraSpaces": ", . ! @ # $ % ^ & * ( ) _ + - = { } [ ] | : ' \" < > ? / \\",
+      "kebobCase": ",-.-!-@-#-$-%-^-&-*-(-)-_-+---=-{-}-[-]-|-:-'-\"-<->-?-/-\\",
+      "kebobCaseNoSpecial": "-----------------------------",
+      "snakeCase": ",_._!_@_#_$_%_^_&_*_(_)___+_-_=_{_}_[_]_|_:_'_\"_<_>_?_/_\\",
+      "snakeCaseNoSpecial": "_____________________________",
+      "customSeparator": ",🤔.🤔!🤔@🤔#🤔$🤔%🤔^🤔&🤔*🤔(🤔)🤔_🤔+🤔-🤔=🤔{🤔}🤔[🤔]🤔|🤔:🤔'🤔\"🤔<🤔>🤔?🤔/🤔\\",
+      "customSeparatorNoSpecial": "🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔",
+      "camelCase": ",.!@#$%^&*()_+-={}[]|:'\"<>?/\\",
+      "camelCaseNoSpecial": "",
+      "shift": "\\, . ! @ # $ % ^ & * ( ) _ + - = { } [ ] | : ' \" < > ? / ",
+      "makeHashtag": [
+        "#,",
+        "#.",
+        "#!"
+      ],
+      "isEmpty": false
+    }
+  },
+  {
+    "input": "!,@,#,$,%,^,&,*,(,),_,+,-,=,{,},[,],|,:,',\",<,>,?,/,\\",
+    "expected": {
+      "capFirst": "!,@,#,$,%,^,&,*,(,),_,+,-,=,{,},[,],|,:,',\",<,>,?,/,\\",
+      "lowerFirst": "!,@,#,$,%,^,&,*,(,),_,+,-,=,{,},[,],|,:,',\",<,>,?,/,\\",
+      "capWords": "!,@,#,$,%,^,&,*,(,),_,+,-,=,{,},[,],|,:,',\",<,>,?,/,\\",
+      "capTitle": "!,@,#,$,%,^,&,*,(,),_,+,-,=,{,},[,],|,:,',\",<,>,?,/,\\",
+      "allCaps": "!,@,#,$,%,^,&,*,(,),_,+,-,=,{,},[,],|,:,',\",<,>,?,/,\\",
+      "removeExtraSpaces": "!,@,#,$,%,^,&,*,(,),_,+,-,=,{,},[,],|,:,',\",<,>,?,/,\\",
+      "kebobCase": "!,@,#,$,%,^,&,*,(,),_,+,-,=,{,},[,],|,:,',\",<,>,?,/,\\",
+      "kebobCaseNoSpecial": "-",
+      "snakeCase": "!,@,#,$,%,^,&,*,(,),_,+,-,=,{,},[,],|,:,',\",<,>,?,/,\\",
+      "snakeCaseNoSpecial": "_",
+      "customSeparator": "!,@,#,$,%,^,&,*,(,),_,+,-,=,{,},[,],|,:,',\",<,>,?,/,\\",
+      "customSeparatorNoSpecial": "",
+      "camelCase": "!,@,#,$,%,^,&,*,(,),_,+,-,=,{,},[,],|,:,',\",<,>,?,/,\\",
+      "camelCaseNoSpecial": "",
+      "shift": "\\!,@,#,$,%,^,&,*,(,),_,+,-,=,{,},[,],|,:,',\",<,>,?,/,",
+      "makeHashtag": [
+        "#!,@,#,$,%,^,&,*,(,),_,+,-,=,{,},[,],|,:,',\",<,>,?,/,\\"
+      ],
+      "isEmpty": false
+    }
+  },
+  {
+    "input": "        \n        \n\t\t\t  ",
+    "expected": {
+      "capFirst": "        \n        \n\t\t\t  ",
+      "lowerFirst": "        \n        \n\t\t\t  ",
+      "capWords": "        \n        \n\t\t\t  ",
+      "capTitle": "        \n        \n\t\t\t  ",
+      "allCaps": "        \n        \n\t\t\t  ",
+      "removeExtraSpaces": "",
+      "kebobCase": "",
+      "kebobCaseNoSpecial": "",
+      "snakeCase": "",
+      "snakeCaseNoSpecial": "",
+      "customSeparator": "",
+      "customSeparatorNoSpecial": "",
+      "camelCase": "",
+      "camelCaseNoSpecial": "",
+      "shift": "         \n        \n\t\t\t ",
+      "makeHashtag": [],
+      "isEmpty": true
     }
   }
 ]
