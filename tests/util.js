@@ -1,13 +1,47 @@
 /* SANDBOX FOR CHECKING FUNCTIONS */
-/* eslint-disable no-tabs, no-console */
+/* eslint-disable no-console, no-unused-vars */
 
+const fs = require('fs');
 const s = require('../src');
+
+function logOutputs(funcs, testInputs) {
+  funcs.forEach((func, i) => {
+    console.log(`${i + 1}: ${s[func].name}`);
+
+    testInputs.forEach((testInput) => {
+      if (s[func].name.includes('Separator')) {
+        console.log(s[func](testInput, '🤔'));
+        return;
+      }
+
+      console.log(s[func](testInput));
+    });
+  });
+}
+
+function writeTestCasesJson(funcs, testInputs) {
+  const testCasesJson = testInputs.map((testInput) => ({
+    input: testInput,
+    expected: funcs.reduce((acc, func) => {
+      if (s[func].name.includes('Separator')) {
+        acc[func] = s[func](testInput, '🤔');
+        return acc;
+      }
+
+      acc[func] = s[func](testInput);
+      return acc;
+    }, {}),
+  }));
+
+  fs.writeFileSync('./tests/testCases.json', JSON.stringify(testCasesJson, null, 2));
+}
 
 const funcs = Object.keys(s);
 const testInputs = [
   'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!',
   'the quick brown fox jumps over the lazy dog!',
   '   padded   with   spaces!   ',
+  'nospaces',
   '',
   'string, with. a: bunc\'h; "of" punctuation!',
   ', . ! @ # $ % ^ & * ( ) _ + - = { } [ ] | : \' " < > ? / \\',
@@ -15,20 +49,8 @@ const testInputs = [
   '        \n        \n\t\t\t  ',
 ];
 
-funcs.forEach((func, i) => {
-  console.log(`${i + 1}: ${s[func].name}`);
-
-  testInputs.forEach((testInput) => {
-    if (s[func].name.includes('Separator')) {
-      const output = s[func](testInput, '🤔');
-      console.log(JSON.stringify(output));
-      return;
-    }
-
-    const output = JSON.stringify(s[func](testInput));
-    console.log(JSON.stringify(output));
-  });
-});
+logOutputs(funcs, testInputs);
+// writeTestCasesJson(funcs, testInputs);
 
 console.log('\n-------------------------------------\n');
 
